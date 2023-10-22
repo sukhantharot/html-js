@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <body>
-<input id="inputField" style="height:50px;width:300px;font-size:20pt;" type="text" value="">
+<input id="inputField" style="height:50px;width:300px;font-size:20pt;" type="text" value="" readonly>
 <br><br>
 <input onClick="sendMessage()" style="height:50px;width:300px;font-size:20pt;" type="button"
        value="Send"/>
 
 <script type="text/javascript">
     function sendMessage() {
-	var valueReceived =  document.getElementById("inputField").value;
-        JSBridge.showMessageInNative(valueReceived);
+        JSBridge.showMessageInNative("test");
     }
     function updateFromNative(message){
 	document.getElementById("inputField").value = message;
